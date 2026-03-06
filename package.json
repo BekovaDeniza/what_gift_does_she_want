@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Сервис угадывания желаемого подарка с интеграцией Telegram",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "cd frontend && npm run build",
+    "build": "cd frontend && npm install && npm run build",
+    "postinstall": "npm run build",
     "install:all": "npm install && cd frontend && npm install"
   },
   "dependencies": {

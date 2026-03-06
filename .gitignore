@@ -1,8 +1,9 @@
 node_modules/
+frontend/node_modules/
+frontend/dist/
 .env
-frontend/node_modules
-frontend/dist
 data.json
 uploads/
 *.log
 .DS_Store
+Thumbs.db
