@@ -1,0 +1,115 @@
+.home {
+  min-height: 100vh;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home__bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, var(--lavender) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 100% 60%, var(--blush) 0%, transparent 45%),
+    radial-gradient(ellipse 50% 30% at 0% 70%, var(--sage) 0%, transparent 40%),
+    var(--bg);
+  z-index: -1;
+}
+
+.home__header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  max-width: 480px;
+}
+
+.home__title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin: 0 0 0.6rem;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.home__subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.home__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 680px;
+}
+
+.home__card {
+  display: block;
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--cream);
+  box-shadow: 0 4px 24px var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+.home__card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.home__card--receive .home__card-icon {
+  background: rgba(184, 196, 168, 0.15);
+}
+
+.home__card--give .home__card-icon {
+  background: rgba(212, 165, 165, 0.15);
+}
+
+.home__card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.6rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.home__card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.home__card--receive {
+  border-left: 3px solid var(--sage);
+}
+
+.home__card--give {
+  border-left: 3px solid var(--rose);
+}
+
+.home__footer {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  max-width: 380px;
+  line-height: 1.5;
+}
