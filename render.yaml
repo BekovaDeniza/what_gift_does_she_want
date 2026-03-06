@@ -1,9 +1,7 @@
 services:
   - type: web
     name: web-gift
-    runtime: node
-    buildCommand: npm install && npm run build
-    startCommand: node server.js
+    runtime: docker
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
